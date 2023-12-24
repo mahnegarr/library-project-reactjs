@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { FaHeart } from "react-icons/fa";
 
-function BookCard({ data: { title, author, image, language, pages } }) {
+function BookCard({ data }) {
+  const { title, author, image, language, pages } = data;
   const [like, setLike] = useState(false);
   const likeHandler = () => {
     setLike((like) => !like);
@@ -18,9 +19,9 @@ function BookCard({ data: { title, author, image, language, pages } }) {
         </div>
       </div>
       <div className="likeBtn">
-      <button onClick={likeHandler} >
-        <FaHeart color={like? "red" :"e0e0e0"} fontSize="1.8rem" />
-      </button>
+        <button onClick={likeHandler}>
+          <FaHeart color={like ? "red" : "e0e0e0"} fontSize="1.8rem" />
+        </button>
       </div>
     </div>
   );

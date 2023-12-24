@@ -43,12 +43,16 @@ body {
 .footer{
   @apply bg-zinc-700 w-full font-normal flex justify-center rounded-[5px] h-12 items-center mt-8
 }
+
+.mainContainer{
+  @apply grid grid-cols-3 gap-4
+}
 .booksContainer{
-  @apply flex flex-col 
+  @apply flex flex-col col-start-1 col-end-3
 }
 
 .bookCard{
-  @apply flex p-2 mb-2 bg-zinc-700 rounded-[8px] w-3/4
+  @apply flex p-2 mb-2 bg-zinc-700 rounded-[8px] 
 }
 
 .bookCard img{
@@ -77,4 +81,8 @@ body {
 
 .bookCard button{
   @apply p-2
+}
+
+.favorite{
+  @apply bg-purple-600  flex 
 }
