@@ -1,4 +1,5 @@
 import React from "react";
+import { FaHeart } from "react-icons/fa";
 
 function BookCard({ data: { title, author, image, language, pages } }) {
   return (
