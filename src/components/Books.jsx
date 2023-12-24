@@ -1,11 +1,12 @@
 import React from "react";
 import { books } from "../constants/mockData";
+import BookCard from "./BookCard";
 function Books() {
   return (
     <div>
       <div>
         {books.map((book) => (
-          <p>{book.image}</p>
+          <BookCard key={book.id} data={book}/>
         ))}
       </div>
       <div></div>
