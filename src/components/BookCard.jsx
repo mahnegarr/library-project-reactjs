@@ -13,7 +13,7 @@ function BookCard({ data: { title, author, image, language, pages } }) {
             <span>{pages} pages</span>
         </div>
       </div>
-      <button>like</button>
+      <button><FaHeart /></button>
     </div>
   );
 }
