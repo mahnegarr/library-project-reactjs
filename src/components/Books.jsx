@@ -4,7 +4,7 @@ import BookCard from "./BookCard";
 function Books() {
   return (
     <div>
-      <div>
+      <div className="booksContainer">
         {books.map((book) => (
           <BookCard key={book.id} data={book}/>
         ))}

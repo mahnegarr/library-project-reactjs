@@ -1,19 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaHeart } from "react-icons/fa";
 
 function BookCard({ data: { title, author, image, language, pages } }) {
+  const [like, setLike] = useState(false);
+  const likeHandler = () => {
+    setLike((like) => !like);
+  };
   return (
-    <div>
+    <div className="bookCard">
       <img src={image} alt={title} />
-      <div>
+      <div className="bookInfo">
         <h3>{title}</h3>
         <p>{author}</p>
         <div>
-            <span>{language}</span>
-            <span>{pages} pages</span>
+          <span>{language}</span>
+          <span>{pages} pages</span>
         </div>
       </div>
-      <button><FaHeart /></button>
+      <div className="likeBtn">
+      <button onClick={likeHandler} >
+        <FaHeart color={like? "red" :"e0e0e0"} fontSize="1.8rem" />
+      </button>
+      </div>
     </div>
   );
 }

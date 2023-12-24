@@ -43,3 +43,38 @@ body {
 .footer{
   @apply bg-zinc-700 w-full font-normal flex justify-center rounded-[5px] h-12 items-center mt-8
 }
+.booksContainer{
+  @apply flex flex-col 
+}
+
+.bookCard{
+  @apply flex p-2 mb-2 bg-zinc-700 rounded-[8px] w-3/4
+}
+
+.bookCard img{
+  @apply rounded-[5px] pr-7
+}
+
+.bookCard .bookInfo{
+  @apply leading-[3rem] 
+}
+
+.bookCard .bookInfo h3{
+  @apply text-[1.5rem] font-semibold
+}
+
+.bookCard .bookInfo p{
+  @apply font-medium
+}
+
+.bookCard .bookInfo span{
+  @apply font-light text-[.8rem] pr-4 text-gray-400
+}
+
+.bookCard .likeBtn{
+  @apply ml-auto
+}
+
+.bookCard button{
+  @apply p-2
+}
