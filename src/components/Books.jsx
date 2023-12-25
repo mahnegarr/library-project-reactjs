@@ -6,6 +6,8 @@ import Search from "./Search";
 
 function Books() {
   const [liked, setLiked] = useState([]);
+  const [search, setSearch] = useState([]);
+
   const handleLikedList = (book, status) => {
     if (status) {
       const newLikedList = liked.filter((i) => i.id !== book.id);
@@ -14,10 +16,15 @@ function Books() {
       setLiked((liked) => [...liked, book]);
     }
   };
+
+  const changeHandler = (e) => {
+    setSearch((search) => [...search], (search = e.target.value));
+    console.log(search);
+  };
   return (
     <>
       <div className="searchBox">
-        <Search />
+        <Search search={search} setSearch={setSearch} />
       </div>
       <div className="mainContainer">
         <div className="booksContainer">
