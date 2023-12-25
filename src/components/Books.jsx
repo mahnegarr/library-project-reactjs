@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import { books } from "../constants/mockData";
+import { books as bookData } from "../constants/mockData";
 import BookCard from "./BookCard";
 import FavoriteCard from "./FavoriteCard";
 import Search from "./Search";
 
 function Books() {
+  const [books, setBooks] = useState(bookData);
   const [liked, setLiked] = useState([]);
   const [search, setSearch] = useState([]);
 
@@ -17,14 +18,21 @@ function Books() {
     }
   };
 
-  const changeHandler = (e) => {
-    setSearch((search) => [...search], (search = e.target.value));
-    console.log(search);
+  const changeHandler = () => {
+    if (search) {
+      const newBooks = bookData.filter((book) =>
+        book.title.toLowerCase().includes(search)
+      );
+      setBooks(newBooks)
+    }else{
+        setBooks(bookData)
+    }
+    
   };
   return (
     <>
       <div className="searchBox">
-        <Search search={search} setSearch={setSearch} />
+        <Search search={search} setSearch={setSearch} changeHandler={changeHandler} />
       </div>
       <div className="mainContainer">
         <div className="booksContainer">
