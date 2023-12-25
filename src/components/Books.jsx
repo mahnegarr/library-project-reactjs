@@ -24,8 +24,8 @@ function Books() {
         ))}
       </div>
       {!!liked.length && (
-        <div className="bg-purple-400 h-fit rounded-[8px] flex flex-grow-[1] flex-shrink-[1] basis-0">
-          <h4>Favorites </h4>
+        <div className="bg-red-700 w-[240px] ml-4 p-2 h-fit rounded-[8px] ">
+          <h4 className="pb-2">Favorites </h4>
 
           {liked.map((book) => (
             <FavoriteCard key={book.id} data={book} />

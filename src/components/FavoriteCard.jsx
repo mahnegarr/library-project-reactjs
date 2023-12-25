@@ -2,7 +2,9 @@ import React from 'react'
 
 function FavoriteCard() {
   return (
-    <div className='favorite'>FavoriteCard</div>
+    <div className='favorite'>
+      
+    </div>
   )
 }
 
