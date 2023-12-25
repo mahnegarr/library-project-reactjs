@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { FaHeart } from "react-icons/fa";
 
-function BookCard({ data }) {
+function BookCard({ data, handleLikedList }) {
   const { title, author, image, language, pages } = data;
   const [like, setLike] = useState(false);
   const likeHandler = () => {
+    handleLikedList(data,like)
     setLike((like) => !like);
   };
   return (
