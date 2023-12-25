@@ -96,7 +96,7 @@ body {
 }
 
 .searchBox input {
-  @apply rounded-[5px] placeholder:pl-2;
+  @apply rounded-[5px]  text-black pl-2;
 }
 .searchIcon {
   @apply bg-red-700 ml-1 p-1 max-w-fit rounded-[5px] text-white;
